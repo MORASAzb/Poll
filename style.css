@@ -1,0 +1,103 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.4);
+  direction: rtl;
+}
+
+.popup {
+  width: 90%;
+  max-width: 500px;
+  /* height: 40vh; */
+  background: white;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.emoji-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.emoji {
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.emoji.selected {
+  font-size: 40px;
+}
+
+.emoji.dimmed {
+  opacity: 0.3;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.radio-group>label {
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin: 5px 15px 10px 0;
+  display: none;
+}
+
+.code-box {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  background: #f7f7f7;
+  border: 2px dashed #28a745;
+  border-radius: 15px;
+  margin-top: 20px;
+}

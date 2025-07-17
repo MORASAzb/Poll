@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    فرم نظرسنجی دیبا درمان کاویان
+  </title>
+  <link href="./style.css" rel="stylesheet">
+  <script src="./main.js"></script>
+</head>
+
+<body>
+  <div class="popup">
+    <div class="page active" id="page1">
+      <h2>دکتر عزیز،</h2>
+      <p>نظر شما برای ما بسیار ارزشمند است؛ با تکمیل این فرم، یک کد تخفیف ۵٪ هدیه بگیرید! 🌼</p>
+      <button onclick="nextPage()">ادامه</button>
+    </div>
+
+    <div class="page" id="page2">
+      <label>نام و نام خانوادگی (اجباری)</label>
+      <input type="text" id="fullname" required>
+      <div class="error" id="error-fullname"></div>
+      <label>شماره تلفن همراه (اجباری)</label>
+      <input type="tel" id="phone" required>
+      <div class="error" id="error-phone"></div>
+      <label>ایمیل (اختیاری)</label>
+      <input type="email" id="email">
+      <label>آدرس (اختیاری)</label>
+      <input type="text" id="address">
+      <button onclick="prevPage()">بازگشت</button>
+      <button onclick="nextPage()">ادامه</button>
+    </div>
+
+    <div class="page" id="page3">
+      <div class="question-group" data-id="q1">
+        <label>1. عملکرد محصولات را از نظر قابلیت شکل‌دهی، زمان کارپذیری و ماندگاری نتایج چگونه ارزیابی می‌کنید؟ (اجباری)</label>
+        <div class="emoji-row"></div>
+        <div class="error" id="error-q1"></div>
+      </div>
+    
+      <div class="question-group" data-id="q2">
+        <label>2. مقایسه با سایر مواد پرکننده مشابه: (اجباری)</label>
+        <div class="emoji-row"></div>
+        <div class="error" id="error-q2"></div>
+      </div>
+    
+      <div class="question-group" data-id="q3">
+        <label>3. ارزیابی شما از بسته‌بندی و دستورالعمل‌ها: (اجباری)</label>
+        <div class="emoji-row"></div>
+        <div class="error" id="error-q3"></div>
+      </div>
+      <label>4. آیا عوارض جانبی مشاهده شده؟ (اجباری)</label>
+      <div class="radio-group">
+        <label><input type="radio" name="sideEffects" value="بله"> بله</label>
+        <label><input type="radio" name="sideEffects" value="خیر"> خیر</label>
+      </div>
+      <div class="error" id="error-sideEffects"></div>
+      <textarea placeholder="در صورت وجود، لطفاً توضیح دهید." id="sideEffectDesc"></textarea>
+      <button onclick="prevPage()">بازگشت</button>
+      <button onclick="nextPage()">ادامه</button>
+    </div>
+
+    <div class="page" id="page4">
+      <label>5. لطفاً هرگونه نظر یا پیشنهاد تکمیلی خود را بیان فرمایید.</label>
+      <textarea id="extraFeedback" rows="4"></textarea>
+      <button onclick="prevPage()">بازگشت</button>
+      <button onclick="nextPage()">ثبت و دریافت کد تخفیف</button>
+    </div>
+
+    <div class="page" id="page5">
+      <h3> با تشکر از شما!</h3>
+      <h4>کد تخفیف ۵٪ شما:</p>
+      <div class="code-box" id="discountCode" onclick="copyToClipboard()" title="برای کپی کلیک کنید"></div>
+      <div id="copyMsg" style="color: green; margin-top: 10px; display: none;" ></div>
+
+    </div>
+  </div>
+</body>
+</html>
